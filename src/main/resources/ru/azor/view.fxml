@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.azor.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+         <children>
+            <Button fx:id="updateListButton" mnemonicParsing="false" onAction="#updateCurrentWeatherListByButton" text="Update" />
+            <ListView fx:id="currentWeatherList" onMouseClicked="#selectCurrentWeatherListItem" VBox.vgrow="ALWAYS" />
+            <Label fx:id="currentCity" />
+            <Button fx:id="updateCityNAmeButton" mnemonicParsing="false" onAction="#updateCityName" text="UPDATE CITY NAME" />
+            <Button fx:id="selectCityNameButton" mnemonicParsing="false" onAction="#selectCityNameToGetTheCurrentWeather" text="Set the name of the city to get the current weather" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="keyLabel" VBox.vgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="4.0" top="4.0" />
+               </padding>
+            </Label>
+            <ListView fx:id="currentWeatherItem" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <ImageView fx:id="imageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</HBox>
